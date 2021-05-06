@@ -13,8 +13,8 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class QuotesConsumerLoadingHandlerImp implements QuotesConsumerLoadingHandler {
 
-    private QuoteLoader quoteLoader;// = new QuoteLoaderFromFilesImpl();
-    private QuotesFilesManager quoteFileManager;// new ConsumerQuoteFilesLoadManagerImpl();
+    private QuoteLoader quoteLoader;
+    private QuotesFilesManager quoteFileManager;
 
     @Override
     public ConsumerQuote handleLoading() {

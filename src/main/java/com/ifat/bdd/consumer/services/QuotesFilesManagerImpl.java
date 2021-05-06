@@ -9,13 +9,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@RequiredArgsConstructor
+
 @Singleton
 public class QuotesFilesManagerImpl implements QuotesFilesManager {
 
     @InjectValue("consumer_input_location")
     private String inputLocationDir;
-    @InjectValue("consumer_input_files_extension_to_search")
+    @InjectValue("consumer_input_quotes_files_extension_to_search")
     private String filesExtension;
 
     private List<File> filesCache = new ArrayList<>();
@@ -25,7 +25,6 @@ public class QuotesFilesManagerImpl implements QuotesFilesManager {
     @Override
     public String findNextQuoteFile() {
 
-        System.out.println("filesExtension= " + filesExtension);
         List<File> filesCreatedSinceLastLoadingTime = Stream.of(new File(inputLocationDir).listFiles())
                 .filter(file -> !file.isDirectory())
                 .filter(file -> file.getName().contains(filesExtension))
