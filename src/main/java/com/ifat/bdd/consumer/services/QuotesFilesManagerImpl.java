@@ -25,9 +25,10 @@ public class QuotesFilesManagerImpl implements QuotesFilesManager {
     @Override
     public String findNextQuoteFile() {
 
+        System.out.println("filesExtension= " + filesExtension);
         List<File> filesCreatedSinceLastLoadingTime = Stream.of(new File(inputLocationDir).listFiles())
                 .filter(file -> !file.isDirectory())
-                .filter(file -> file.getName().contains(".obj"))
+                .filter(file -> file.getName().contains(filesExtension))
                 .filter(file ->file.lastModified() > lastLoaded)
                 .collect(Collectors.toList());
 

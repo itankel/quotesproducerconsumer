@@ -2,7 +2,6 @@ package com.ifat.bdd.consumer.handlers;
 
 import com.ifat.bdd.consumer.model.ConsumerQuote;
 import com.ifat.bdd.consumer.services.QuoteSaverToFile;
-import com.ifat.bdd.infra.InjectByType;
 import com.ifat.bdd.infra.Singleton;
 import lombok.AllArgsConstructor;
 

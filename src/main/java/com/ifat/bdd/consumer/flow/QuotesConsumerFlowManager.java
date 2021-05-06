@@ -3,18 +3,17 @@ package com.ifat.bdd.consumer.flow;
 import com.ifat.bdd.consumer.control.QuotesConsumer;
 import com.ifat.bdd.infra.InjectByType;
 import com.ifat.bdd.infra.Singleton;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 
 import java.util.concurrent.TimeUnit;
 
-@NoArgsConstructor
+@AllArgsConstructor
 @Singleton
 public class QuotesConsumerFlowManager {
 
-    @InjectByType
     private QuotesConsumer quotesConsumer;
-
 
     @SneakyThrows
     public void  activateConsumer(){
@@ -24,8 +23,6 @@ public class QuotesConsumerFlowManager {
         consumerSaveStageThread.start();
         Thread.currentThread().join();
     }
-
-
 
     @SneakyThrows
     private void consumeLoadingStage(){

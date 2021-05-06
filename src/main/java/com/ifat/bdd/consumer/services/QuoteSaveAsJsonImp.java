@@ -15,6 +15,6 @@ public class QuoteSaveAsJsonImp implements QuoteSaverToFile {
     public void save(Quote quote, String fileName) {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(new File(fileName), quote);
-        System.out.println("Saved "+quote + " to json file > "+fileName);
+        System.out.println("    Saved quote : "+quote + " to json file : "+fileName);
     }
 }

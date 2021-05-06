@@ -12,9 +12,8 @@ import lombok.AllArgsConstructor;
 @Singleton
 @AllArgsConstructor
 public class QuotesConsumerLoadingHandlerImp implements QuotesConsumerLoadingHandler {
-   // @InjectByType
+
     private QuoteLoader quoteLoader;// = new QuoteLoaderFromFilesImpl();
-    //@InjectByType
     private QuotesFilesManager quoteFileManager;// new ConsumerQuoteFilesLoadManagerImpl();
 
     @Override
