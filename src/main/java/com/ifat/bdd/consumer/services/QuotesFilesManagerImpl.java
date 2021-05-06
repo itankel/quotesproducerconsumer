@@ -11,13 +11,15 @@ import java.util.stream.Stream;
 
 @RequiredArgsConstructor
 @Singleton
-public class ConsumerQuoteFilesLoadManagerImpl implements ConsumerQuoteFilesManager {
+public class QuotesFilesManagerImpl implements QuotesFilesManager {
 
     @InjectValue("consumer_input_location")
     private String inputLocationDir;
+    @InjectValue("consumer_input_files_extension_to_search")
+    private String filesExtension;
 
     private List<File> filesCache = new ArrayList<>();
-    private long lastLoaded;
+    private long lastLoaded=0;
 
 
     @Override

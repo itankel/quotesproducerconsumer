@@ -1,5 +1,5 @@
 package com.ifat.bdd.consumer.services;
 
-public interface ConsumerQuoteFilesManager {
+public interface QuotesFilesManager {
     String findNextQuoteFile();
 }

@@ -17,6 +17,7 @@ public class QuoterProducerFlowManager {
     public void saveQuote() {
         Quote quote = producer.generate();
         saver.save(quote);
+        System.out.println("produced quote > " + quote);
     }
 
 }

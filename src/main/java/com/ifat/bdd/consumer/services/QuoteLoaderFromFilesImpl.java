@@ -24,7 +24,7 @@ public class QuoteLoaderFromFilesImpl implements QuoteLoader {
         ObjectInputStream ois = new ObjectInputStream(fis);
 
         Quote quote = (Quote) ois.readObject();
-        System.out.println(quote +" had been loader from file " + fileName);
+        System.out.println("Finished loading "+ quote +" from file " + fileName);
         return quote;
     }
 
