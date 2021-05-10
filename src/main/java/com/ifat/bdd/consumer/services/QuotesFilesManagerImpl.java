@@ -2,7 +2,6 @@ package com.ifat.bdd.consumer.services;
 
 import com.ifat.bdd.infra.Singleton;
 import com.ifat.bdd.producer.services.InjectValue;
-import lombok.RequiredArgsConstructor;
 
 import java.io.File;
 import java.util.*;

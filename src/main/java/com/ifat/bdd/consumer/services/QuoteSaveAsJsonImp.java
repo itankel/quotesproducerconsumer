@@ -10,10 +10,11 @@ import java.io.File;
 @NoArgsConstructor
 public class QuoteSaveAsJsonImp implements QuoteSaverToFile {
 
+    private ObjectMapper mapper = new ObjectMapper();
+
     @SneakyThrows
     @Override
     public void save(Quote quote, String fileName) {
-        ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(new File(fileName), quote);
         System.out.println("    Saved quote : "+quote + " to json file : "+fileName);
     }
